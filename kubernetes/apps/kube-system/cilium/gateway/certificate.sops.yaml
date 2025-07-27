@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/cert-manager.io/certificate_v1.json
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: vierra-host-production
+spec:
+  secretName: vierra-host-production-tls
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  commonName: vierra.host
+  dnsNames:
+    - vierra.host
+    - '*.vierra.host'
+sops:
+  age:
+    - recipient: age1hltlzj2xll67pnr5mjzq2rd4kfnqfdzammf2jc5x7tl0l5ke63tsnma8wc
+      enc: |
+        -----BEGIN AGE ENCRYPTED FILE-----
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBIWVVYNzdZZU1WQkdvNlBu
+        QmZjaHNyK0xCSjM3RzhwSjUvQWE2cXhXQ1ZJCkhLN2d0K0FybUpqQllYcUJoeDdS
+        d2kzU1BNUjJQNTFXazBuSC9nVllHOXcKLS0tIHdlejk0eWJNanQvdnFEWFRiOTcx
+        dW0yL29vUEg0SlgvS21SdXBIVmdBb1EKiEm04r8ou72J8hJHI6RAXIJD/CZJe5bs
+        TrzqzHoCv2bnchK7ocgIm+Xc27KhJHWokzobb8aOc/dwnFOJHBc6Vg==
+        -----END AGE ENCRYPTED FILE-----
+  lastmodified: "2025-07-27T19:50:20Z"
+  mac: ENC[AES256_GCM,data:5K91IYFelrj9SRaEuzWTJfujZasPAs+otST9ls74Mk6UQZcHs2zkd9LhkQhV4F7iK8rFlWuaDGpp2j8u7e0GRtWBZEt6XJPtOEb3QPyobBZTP0/Cc6YSK8SDOsbvYY259Z8srnJdjSKFjj79WdUZWsWHEZb1pJWX7Zx/Kk8WUzQ=,iv:W3zUIukxmD2CPMpMBOSnPL1mrPpp3aYmUIv01qWdLXk=,tag:To+omn+T2p0UK9Czc+n6dQ==,type:str]
+  encrypted_regex: ^(data|stringData)$
+  mac_only_encrypted: true
+  version: 3.10.2

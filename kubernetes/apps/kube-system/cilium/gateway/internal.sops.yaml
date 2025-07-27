@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=https://github.com/datreeio/CRDs-catalog/raw/refs/heads/main/gateway.networking.k8s.io/gateway_v1.json
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: internal
+  annotations:
+    external-dns.alpha.kubernetes.io/target: internal.vierra.host
+spec:
+  gatewayClassName: cilium
+  addresses:
+    - type: IPAddress
+      value: 10.10.130.92
+  infrastructure:
+    annotations:
+      external-dns.alpha.kubernetes.io/hostname: internal.vierra.host
+  listeners:
+    - name: http
+      protocol: HTTP
+      port: 80
+      hostname: '*.vierra.host'
+      allowedRoutes:
+        namespaces:
+          from: Same
+    - name: https
+      protocol: HTTPS
+      port: 443
+      hostname: '*.vierra.host'
+      allowedRoutes:
+        namespaces:
+          from: All
+      tls:
+        certificateRefs:
+          - kind: Secret
+            name: vierra-host-production-tls
+sops:
+  age:
+    - recipient: age1hltlzj2xll67pnr5mjzq2rd4kfnqfdzammf2jc5x7tl0l5ke63tsnma8wc
+      enc: |
+        -----BEGIN AGE ENCRYPTED FILE-----
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBZYWFYUEhBbHFtbW44STlX
+        Wm1XaUxCRU1ZMjRub1FTMjdoekhSemkrR2kwCnErdUxuYXpOUnRPaWFaRnZHMnVX
+        SEJWRlJsYjFzdmhGclRqdlppMVJYSW8KLS0tIDUwQ2NNWHhKZ2lsS28zbWYxTmxI
+        SHZPQjhxbklQZElVU0pVdDNHbktBdVkKuEjktUOTdeqWfMU46LNWkai2nAHTxRln
+        EpqqyboYhJ52wjqXvaa562Oo7D0MTpjUnYcdKRKrWoBjqhnsGdTTCw==
+        -----END AGE ENCRYPTED FILE-----
+  lastmodified: "2025-07-27T19:50:20Z"
+  mac: ENC[AES256_GCM,data:pGtACcXwD9f0aVCuv9uyqjbo6gkNqhciaE7wL5VONM22wc5uS87uEhImnKTHCEWQ2X4IYBIBoQ09ERFnG+hQV75B3IYFIt/SfSeuYbw+xYGDB7gyt+FJKKxgWEq44goI+yXAscIrTzQrcDBXmlN8PTTSrwSXIVvOO7DOaLaa8bQ=,iv:XCbBgWyIAJTqVa7yGch9Zr26BUx/De9xsRl58d+spGQ=,tag:dLUwwO3ACexnrGIPe1Exkg==,type:str]
+  encrypted_regex: ^(data|stringData)$
+  mac_only_encrypted: true
+  version: 3.10.2

@@ -13,6 +13,11 @@
     },
     "yaml.schemaStore.enable": true,
     "yaml.schemas": {
-        "kubernetes": "./kubernetes/**/*.yaml"
-    }
+        "kubernetes": "./kubernetes/**/*.yaml",
+        "https://www.schemastore.org/yamllint.json": "file:///home/bvierra/p/homelab-talos/talos-gitops/cluster.yaml"
+    },
+    "debug.javascript.defaultRuntimeExecutable": {
+        "pwa-node": "/home/bvierra/.local/share/mise/shims/node"
+    },
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv"
 }

@@ -1,0 +1,26 @@
+apiVersion: externaldns.k8s.io/v1alpha1
+kind: DNSEndpoint
+metadata:
+  name: cloudflare-tunnel
+spec:
+  endpoints:
+    - dnsName: external.vierra.host
+      recordType: CNAME
+      targets:
+        - 6f258068-ee7d-408e-a585-bf78232d9eb1.cfargotunnel.com
+sops:
+  age:
+    - recipient: age1hltlzj2xll67pnr5mjzq2rd4kfnqfdzammf2jc5x7tl0l5ke63tsnma8wc
+      enc: |
+        -----BEGIN AGE ENCRYPTED FILE-----
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBVcU5kTnkyNEd0MzBnYUlj
+        Q3MvMFlnK1FId3hvM2dtZER2V3h2eVJyMjF3Ck1rOVlxRG9GQjl3OXg5bzNnYTBt
+        Mk54blZRRVRVZ1pKR2szLzR6TjU0NXcKLS0tIGNFSjU1aFJRbER6ZGJTZnNJdkRL
+        SmRRNlN6b0l3WWJOWFZ4OURKV1YrQUkKqGKfHc38jzScuwjqppViLUmJRCrkhGaV
+        07j13sGbpCuXz8aF7LlR00diLN9gMWUdMIg9aAya9Ed1tXY0MrjeJQ==
+        -----END AGE ENCRYPTED FILE-----
+  lastmodified: "2025-07-27T19:50:20Z"
+  mac: ENC[AES256_GCM,data:PwOG6bEnU2qm2YrhxNcARGgzniuQGX4kNExgqHhn0RNVWQfq1dTLRtgvnA/2j/sqKV3dH3taXHS9lz7HRlZhvzkZuvynOAFLnSVSF6fVEA4aiJOgq+YcJGbkvdQcbVP0yEfFvkrqYsQFK6Y5rsK67VN6vzyaJLQqxCU5oBPT3h8=,iv:Gt8ofvRa++4MC9u0C3Au0qweNDI1ccU+3pHJttWRP84=,tag:gKpVseb4pO0872XBgfwnIg==,type:str]
+  encrypted_regex: ^(data|stringData)$
+  mac_only_encrypted: true
+  version: 3.10.2

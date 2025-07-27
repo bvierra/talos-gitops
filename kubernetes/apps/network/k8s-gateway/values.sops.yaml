@@ -1,0 +1,28 @@
+fullnameOverride: k8s-gateway
+domain: vierra.host
+ttl: 1
+service:
+  type: LoadBalancer
+  port: 53
+  annotations:
+    io.cilium/lb-ipam-ips: 10.10.130.91
+  externalTrafficPolicy: Cluster
+watchedResources:
+  - HTTPRoute
+  - Service
+sops:
+  age:
+    - recipient: age1hltlzj2xll67pnr5mjzq2rd4kfnqfdzammf2jc5x7tl0l5ke63tsnma8wc
+      enc: |
+        -----BEGIN AGE ENCRYPTED FILE-----
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBmVHk2L1p6MW55TDNGdVg0
+        dmVMOWp3dmpTcDNyOG1EelB4QUlPUW9XbW1vCm1DK3dSWDZseTVPaWt6aFIzZG1m
+        eWZHMUlHbzNTWVIvLzVwcDh4MFgvbEEKLS0tIEZ6ZlArNXRMVkQzOHdKUVNPSzJi
+        UjhhYjFoYnhQdWtvclFsSzVGMFV1ZFEKgQsHOPyg820PneQW5c9/oMqfLa1OYwUQ
+        tUOGBb3XxDuboBMIGlyIuPEzdrwv+uDuWD6BcFbv2RNkHD8YZi4yow==
+        -----END AGE ENCRYPTED FILE-----
+  lastmodified: "2025-07-27T19:50:20Z"
+  mac: ENC[AES256_GCM,data:Froe1QNIdKIvo40c+qGDftInajpSi+LVze/cmSckYKIVJkp2JOUOTBXOYROHMiHLDCz1qRP2eMDGtNc2MAkwTTLJl+FrYECodwVQB62hBKtcQuD+0vD43Nxjuh8763MBI57bHm1u/MFBwRA+yST6kfRBOcd+XbhdB+rVwjvaFIw=,iv:rnNp4FnQmioGgX2woD9POje4bY07CDVqX6msZGy5B6k=,tag:CvKOB8C73sKDU/eMTpCYRw==,type:str]
+  encrypted_regex: ^(data|stringData)$
+  mac_only_encrypted: true
+  version: 3.10.2
