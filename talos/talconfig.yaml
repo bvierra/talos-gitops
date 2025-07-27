@@ -22,8 +22,7 @@ cniConfig:
 nodes:
   - hostname: "master-01"
     ipAddress: "10.10.130.101"
-    installDiskSelector:
-      serial: "sda"
+    installDisk: /dev/sda
     machineSpec:
       secureboot: false
     talosImageURL: factory.talos.dev/installer/583560d413df7502f15f3c274c36fc23ce1af48cef89e98b1e563fb49127606e
@@ -42,8 +41,7 @@ nodes:
           ip: "10.10.130.90"
   - hostname: "master-02"
     ipAddress: "10.10.130.102"
-    installDiskSelector:
-      serial: "sda"
+    installDisk: /dev/sda
     machineSpec:
       secureboot: false
     talosImageURL: factory.talos.dev/installer/583560d413df7502f15f3c274c36fc23ce1af48cef89e98b1e563fb49127606e
@@ -62,8 +60,7 @@ nodes:
           ip: "10.10.130.90"
   - hostname: "master-03"
     ipAddress: "10.10.130.103"
-    installDiskSelector:
-      serial: "sda"
+    installDisk: /dev/sda
     machineSpec:
       secureboot: false
     talosImageURL: factory.talos.dev/installer/583560d413df7502f15f3c274c36fc23ce1af48cef89e98b1e563fb49127606e
@@ -82,8 +79,7 @@ nodes:
           ip: "10.10.130.90"
   - hostname: "worker-01"
     ipAddress: "10.10.130.111"
-    installDiskSelector:
-      serial: "sda"
+    installDisk: /dev/sda
     machineSpec:
       secureboot: false
     talosImageURL: factory.talos.dev/installer/583560d413df7502f15f3c274c36fc23ce1af48cef89e98b1e563fb49127606e
@@ -102,8 +98,7 @@ nodes:
           ip: "10.10.130.90"
   - hostname: "worker-02"
     ipAddress: "10.10.130.112"
-    installDiskSelector:
-      serial: "sda"
+    installDisk: /dev/sda
     machineSpec:
       secureboot: false
     talosImageURL: factory.talos.dev/installer/583560d413df7502f15f3c274c36fc23ce1af48cef89e98b1e563fb49127606e
@@ -122,8 +117,7 @@ nodes:
           ip: "10.10.130.90"
   - hostname: "worker-03"
     ipAddress: "10.10.130.113"
-    installDiskSelector:
-      serial: "sda"
+    installDisk: /dev/sda
     machineSpec:
       secureboot: false
     talosImageURL: factory.talos.dev/installer/583560d413df7502f15f3c274c36fc23ce1af48cef89e98b1e563fb49127606e
@@ -142,8 +136,7 @@ nodes:
           ip: "10.10.130.90"
   - hostname: "worker-04"
     ipAddress: "10.10.130.114"
-    installDiskSelector:
-      serial: "sda"
+    installDisk: /dev/sda
     machineSpec:
       secureboot: false
     talosImageURL: factory.talos.dev/installer/583560d413df7502f15f3c274c36fc23ce1af48cef89e98b1e563fb49127606e
