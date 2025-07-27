@@ -1,0 +1,8 @@
+kubernetes-master-01.yaml
+kubernetes-master-02.yaml
+kubernetes-master-03.yaml
+kubernetes-worker-01.yaml
+kubernetes-worker-02.yaml
+kubernetes-worker-03.yaml
+kubernetes-worker-04.yaml
+talosconfig
