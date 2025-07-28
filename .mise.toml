@@ -32,3 +32,4 @@ run = [
 "aqua:siderolabs/talos" = "1.10.5"
 "aqua:yannh/kubeconform" = "0.7.0"
 "asdf:janpieper/asdf-ksops" = "4.3.3"
+kubens = "latest"

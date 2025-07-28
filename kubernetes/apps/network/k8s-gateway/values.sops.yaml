@@ -1,5 +1,5 @@
 fullnameOverride: k8s-gateway
-domain: vierra.host
+domain: k8s.vierra.host
 ttl: 1
 service:
   type: LoadBalancer
@@ -15,14 +15,14 @@ sops:
     - recipient: age1hltlzj2xll67pnr5mjzq2rd4kfnqfdzammf2jc5x7tl0l5ke63tsnma8wc
       enc: |
         -----BEGIN AGE ENCRYPTED FILE-----
-        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBmVHk2L1p6MW55TDNGdVg0
-        dmVMOWp3dmpTcDNyOG1EelB4QUlPUW9XbW1vCm1DK3dSWDZseTVPaWt6aFIzZG1m
-        eWZHMUlHbzNTWVIvLzVwcDh4MFgvbEEKLS0tIEZ6ZlArNXRMVkQzOHdKUVNPSzJi
-        UjhhYjFoYnhQdWtvclFsSzVGMFV1ZFEKgQsHOPyg820PneQW5c9/oMqfLa1OYwUQ
-        tUOGBb3XxDuboBMIGlyIuPEzdrwv+uDuWD6BcFbv2RNkHD8YZi4yow==
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBkeW1JNitCa3R5MVBHRFNn
+        d0dUK3lrMDVSWENlTi9DNlozejg1TWJERnd3CnArbXJ4L0lLY1lBbW01VlVOYlZN
+        dFdpYW9ZYU41cWdCOWpaamZFN2lTNXcKLS0tIFZPWXV3S2JoZDBpeU1wcXZ5bUxz
+        NDBuNCtEcTIzeDcxRzMvY2N3OGY2KzAKB/heWsa6XJ5ZiWnA7BUUU/t5GzkKsnxf
+        QleXD44go7C7sWQ7C2/UR5dYMsCV5sIqWPLzSiLXKwersBBS9/HSBg==
         -----END AGE ENCRYPTED FILE-----
-  lastmodified: "2025-07-27T19:50:20Z"
-  mac: ENC[AES256_GCM,data:Froe1QNIdKIvo40c+qGDftInajpSi+LVze/cmSckYKIVJkp2JOUOTBXOYROHMiHLDCz1qRP2eMDGtNc2MAkwTTLJl+FrYECodwVQB62hBKtcQuD+0vD43Nxjuh8763MBI57bHm1u/MFBwRA+yST6kfRBOcd+XbhdB+rVwjvaFIw=,iv:rnNp4FnQmioGgX2woD9POje4bY07CDVqX6msZGy5B6k=,tag:CvKOB8C73sKDU/eMTpCYRw==,type:str]
+  lastmodified: "2025-07-28T05:26:58Z"
+  mac: ENC[AES256_GCM,data:hGmksU7xBcg5pnovl0+d4FVVNfT0jks2tgSNYDms59wJzjNpF552bYxcSKhYiIZ//7w8G91nkDR5M709HDru+9TmXNaCpuhKy4bSc68roxGEeVLXo0lplkYIGReButE5tLP1L/sKR49v3NEDMeV18O3uV8NizRdKHic8Fvqlb8U=,iv:sV9deaOWqpU6THo25SZEf+Zy7MpGum8mzdm+JzPy9HU=,tag:y8e6dhECA0deEzWUgbbPfA==,type:str]
   encrypted_regex: ^(data|stringData)$
   mac_only_encrypted: true
   version: 3.10.2

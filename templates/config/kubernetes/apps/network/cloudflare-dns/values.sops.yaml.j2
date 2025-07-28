@@ -18,6 +18,7 @@ policy: sync
 sources: ["crd", "gateway-httproute"]
 txtPrefix: k8s.
 txtOwnerId: default
+# domainFilters: ["#{ cloudflare_domain_zone_name }#"]
 domainFilters: ["#{ cloudflare_domain }#"]
 serviceMonitor:
   enabled: true

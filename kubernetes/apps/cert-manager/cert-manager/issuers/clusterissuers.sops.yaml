@@ -2,35 +2,34 @@
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
-    name: letsencrypt-production
+  name: letsencrypt-production
 spec:
-    acme:
-        server: https://acme-staging-v02.api.letsencrypt.org/directory
-        # server: https://acme-v02.api.letsencrypt.org/directory
-        privateKeySecretRef:
-            name: letsencrypt-production
-        solvers:
-            - dns01:
-                cloudflare:
-                    apiTokenSecretRef:
-                        name: cert-manager-secret
-                        key: api-token
-              selector:
-                dnsZones:
-                    - vierra.host
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      name: letsencrypt-production
+    solvers:
+      - dns01:
+          cloudflare:
+            apiTokenSecretRef:
+              name: cert-manager-secret
+              key: api-token
+        selector:
+          dnsZones:
+            - k8s.vierra.host
 sops:
-    age:
-        - recipient: age1hltlzj2xll67pnr5mjzq2rd4kfnqfdzammf2jc5x7tl0l5ke63tsnma8wc
-          enc: |
-            -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB0ZVhVWGVFbUVTUFZWamhV
-            RzlCT21UMk9FQm00S0FkWXhvRysyVGFOZ213ClNWdElCd3pzRFhvd3Bqa1F4K3hj
-            QUQrb3JqUklxdHJPUkJZOVVqemNjTnMKLS0tIHUzOVR1Zll4M2pmVDJ4R242a3BR
-            cDgxOHV0UldoWXU1MDMyR21HTzNLb2MKAtCE1h8YcX5FgBCaQg1uJUHYbFkyp0+m
-            p200ZRQEQdJCv3y88OY8uW22WCug4ztEcqHA+1jBKdbJHZduiYR5dg==
-            -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-07-27T19:55:56Z"
-    mac: ENC[AES256_GCM,data:dk3pyKjMsY4N/e0kRrgLzWbgJvt/2hc+dhrjZu0FQ2sJHvoi6C4C0h/6AayJzzRmdDilRYk9xN8UAppkCVtuJAAzGg/OPJ4ZPtE3+Q6Dsmg2+uP3+VXQyajkt75n1Y28ihRvLVmracf0py+GKUwxRSHvg2PRXrR0BA1NKpt8Bqc=,iv:d2S22PkwJDTu+h9PzFTnddli5MCK5+WqA3vdKOTow5w=,tag:/yvawdiRrlt9PmUBYlrCsA==,type:str]
-    encrypted_regex: ^(data|stringData)$
-    mac_only_encrypted: true
-    version: 3.10.2
+  age:
+    - recipient: age1hltlzj2xll67pnr5mjzq2rd4kfnqfdzammf2jc5x7tl0l5ke63tsnma8wc
+      enc: |
+        -----BEGIN AGE ENCRYPTED FILE-----
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBwWlJRYzFLU1VNTWlDN3pV
+        b05FdUNRS3lNUnN3dnBwaGN1eUEzdnB5c0VBCmdFbDdQTk1pbHJZMUJzQTNUN1FE
+        UEp2N3BjSndhVS8wbTgycWRnLy9vWmcKLS0tIDhNWllyVmNzZGtwTnBXeGJzang2
+        N1cwZWIyTDBkMzZRdWp6cEFyei8rVEkKtCpQSJatdu3AC6rINwHmk8muvanh9aCd
+        x7BoKn9fgKTzE6gpV/oEFgloy1dYY81xwZVqH5sC9uiWExCUOqaTuw==
+        -----END AGE ENCRYPTED FILE-----
+  lastmodified: "2025-07-28T05:26:58Z"
+  mac: ENC[AES256_GCM,data:pgkO1655qP9Ti7xCEbRbzEwCXoBshmBzejw3aAVQdpP72aSRKVMLQemKDi6p4ICU2eU5iL3ziaSaeFwmHnpUWBEi3xGy8s7qfBPB0/tIr5qZJ6hngk+rZUHzyNndxTz6DViLJkSd1dOIYZCeOqYV/NcU6hWutIDpiabTiyT9TLg=,iv:pEU1ZZ3xEoKhKy5ZIg7Ve1NyFfRKUgIHmGnJfhXICzw=,tag:M32nAaFTMsExl37FTgCnWA==,type:str]
+  encrypted_regex: ^(data|stringData)$
+  mac_only_encrypted: true
+  version: 3.10.2

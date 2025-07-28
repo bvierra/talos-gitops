@@ -64,7 +64,7 @@ serviceMonitor:
 route:
   app:
     hostnames:
-      - echo.vierra.host
+      - echo.k8s.vierra.host
     parentRefs:
       - name: external
         namespace: kube-system
@@ -78,14 +78,14 @@ sops:
     - recipient: age1hltlzj2xll67pnr5mjzq2rd4kfnqfdzammf2jc5x7tl0l5ke63tsnma8wc
       enc: |
         -----BEGIN AGE ENCRYPTED FILE-----
-        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBHNWxSNjhlY3RYWVlWZlFT
-        czRSUG13L2tpNVhjQVJFNE5COXMrOTloT0MwCktWUXRZM1Z4ZnpWL2hIelE0VDRG
-        K2lRbmpqdkZQM1htN3UvN1E2bkZSMmcKLS0tIHArU2pIUzFpM0ZyakVreGRpT1hl
-        Nk41OVlpc3YzMXRBY05lMTNweHlKcncK9kynQxH2dlZQs6ncw4T7D2MY3RwRN+Wz
-        DfCCTdlGpVRbj8gHu2xQNCT47Jhqmz+TgsXkHioaOTtq2DSJJtsU6g==
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBtUUFQOWxBdzhaYjRoaGI4
+        MmtIa3JpRGRndHFqbnorZnIwcC9FZ1c2YlZRClJFTEV4S3l5d3JmQVVWTTlheUto
+        ZHZCN2RYenlvaUNKN2ZZbmZDbUI5UU0KLS0tIHRvWlpadHlxRHl2TTdlRzN3UWhU
+        Ui9OOG5uTHBkc0FJL3BhNWVPOWUrNk0Kwtn5+B2lqtSPme8iQGPt+4Sj8A2vPvc5
+        9Wsb2Nw/DyXzzvhxmQbxmdUSsoZvE+LWNIL1OfPqEWcIW55bN5T3Pg==
         -----END AGE ENCRYPTED FILE-----
-  lastmodified: "2025-07-27T19:50:20Z"
-  mac: ENC[AES256_GCM,data:hIuU6wByKhf82iwKi4dSC68JmYIcsoHYKf+G4zUMIPV16fnggPjVdk98NU2IMzZftis5AgCi9SkjRgPGQ6d53F2B0PLHfNfJGWZT9WY8E5Ly8gf6QFDbC7d8Hs/yLRE12qE4MnqPZ9OMBP3sSErvABrhDTujw4ayalmHsma/YWg=,iv:mF368P+FkvDlTb9y6mUfZrPWFp0l4OOrDR0hxaDtTbg=,tag:+2JrVW0GDPu5fmDpj3Z63Q==,type:str]
+  lastmodified: "2025-07-28T05:26:58Z"
+  mac: ENC[AES256_GCM,data:M+elfr38KZ+fr0jFkUEn0JiKgYUggkufD9SgnujulV8g/Sw+Fntmmy5rs+u1U+tm1Y35oGgy7Zgdnc0xn1hjSK8XUmxsDYZZ+9Zuuzm+JwZpSYkovI75LGQoqu8TqgLy9qZJd5muhSf1VU4N2ruOtjz95E0487VWmpfTFNAwLOY=,iv:B4/J187Dz/wadutGkvm22+GTkPCXsBwFDIoCORWkYsg=,tag:yAqb2oCVfQ1mwDRIpJo11A==,type:str]
   encrypted_regex: ^(data|stringData)$
   mac_only_encrypted: true
   version: 3.10.2

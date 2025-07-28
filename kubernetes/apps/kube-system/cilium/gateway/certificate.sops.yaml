@@ -2,29 +2,29 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: vierra-host-production
+  name: k8s-vierra-host-production
 spec:
-  secretName: vierra-host-production-tls
+  secretName: k8s-vierra-host-production-tls
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
-  commonName: vierra.host
+  commonName: k8s.vierra.host
   dnsNames:
-    - vierra.host
-    - '*.vierra.host'
+    - k8s.vierra.host
+    - '*.k8s.vierra.host'
 sops:
   age:
     - recipient: age1hltlzj2xll67pnr5mjzq2rd4kfnqfdzammf2jc5x7tl0l5ke63tsnma8wc
       enc: |
         -----BEGIN AGE ENCRYPTED FILE-----
-        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBIWVVYNzdZZU1WQkdvNlBu
-        QmZjaHNyK0xCSjM3RzhwSjUvQWE2cXhXQ1ZJCkhLN2d0K0FybUpqQllYcUJoeDdS
-        d2kzU1BNUjJQNTFXazBuSC9nVllHOXcKLS0tIHdlejk0eWJNanQvdnFEWFRiOTcx
-        dW0yL29vUEg0SlgvS21SdXBIVmdBb1EKiEm04r8ou72J8hJHI6RAXIJD/CZJe5bs
-        TrzqzHoCv2bnchK7ocgIm+Xc27KhJHWokzobb8aOc/dwnFOJHBc6Vg==
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBSY2FFVlFONHM0YXBtZXZB
+        bTRNSlA3WEs0OG1ZeWhoaVdLdExvdmVkekJJCmNtaG5JdmtrdEFLbnpHcllQbmFJ
+        THV3b2VmYzlDWVZ6aDVvOUVkN0VoWFkKLS0tIHUrTW5JZ1N5a255SXhTZUR1cmFL
+        ZStZcnRkVzNOVUJCcU9sVkFtellYMjQKhvfcMjiVbaGohn7uwrMVvg1LoqT2CByY
+        35KkIJ5NxZ20wjOFuY5INZH9PwTXvMCzJmINt1n147RjRCUr00KHQw==
         -----END AGE ENCRYPTED FILE-----
-  lastmodified: "2025-07-27T19:50:20Z"
-  mac: ENC[AES256_GCM,data:5K91IYFelrj9SRaEuzWTJfujZasPAs+otST9ls74Mk6UQZcHs2zkd9LhkQhV4F7iK8rFlWuaDGpp2j8u7e0GRtWBZEt6XJPtOEb3QPyobBZTP0/Cc6YSK8SDOsbvYY259Z8srnJdjSKFjj79WdUZWsWHEZb1pJWX7Zx/Kk8WUzQ=,iv:W3zUIukxmD2CPMpMBOSnPL1mrPpp3aYmUIv01qWdLXk=,tag:To+omn+T2p0UK9Czc+n6dQ==,type:str]
+  lastmodified: "2025-07-28T05:26:58Z"
+  mac: ENC[AES256_GCM,data:/xgOdlNtnIf9Sy/Ut7T6czaxUMp04qD+44FL217THqKeY+wTqIj0tbNmuEOZn9eCxZA1R7FgdgKht9FbikMgDPjZUCJ6Yd1KDN2YiB1sKfBziiyPTDJdLp7ZVuDnqTOxKM9tWROcmzqIqB4r5KcYrH097FyD5KdgivM2HhR08VQ=,iv:ciBBm6b0PglgqVI9kIz8iM/3fg10/6z1zkCPsFeIysc=,tag:cLJcRAoq9k399vL6sK+M/A==,type:str]
   encrypted_regex: ^(data|stringData)$
   mac_only_encrypted: true
   version: 3.10.2

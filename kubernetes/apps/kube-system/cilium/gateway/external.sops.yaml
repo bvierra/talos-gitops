@@ -4,7 +4,7 @@ kind: Gateway
 metadata:
   name: external
   annotations:
-    external-dns.alpha.kubernetes.io/target: external.vierra.host
+    external-dns.alpha.kubernetes.io/target: external.k8s.vierra.host
 spec:
   gatewayClassName: cilium
   addresses:
@@ -12,39 +12,39 @@ spec:
       value: 10.10.130.93
   infrastructure:
     annotations:
-      external-dns.alpha.kubernetes.io/hostname: external.vierra.host
+      external-dns.alpha.kubernetes.io/hostname: external.k8s.vierra.host
   listeners:
     - name: http
       protocol: HTTP
       port: 80
-      hostname: '*.vierra.host'
+      hostname: '*.k8s.vierra.host'
       allowedRoutes:
         namespaces:
           from: Same
     - name: https
       protocol: HTTPS
       port: 443
-      hostname: '*.vierra.host'
+      hostname: '*.k8s.vierra.host'
       allowedRoutes:
         namespaces:
           from: All
       tls:
         certificateRefs:
           - kind: Secret
-            name: vierra-host-production-tls
+            name: k8s-vierra-host-production-tls
 sops:
   age:
     - recipient: age1hltlzj2xll67pnr5mjzq2rd4kfnqfdzammf2jc5x7tl0l5ke63tsnma8wc
       enc: |
         -----BEGIN AGE ENCRYPTED FILE-----
-        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB6ZXphd1dZcDMzeUZ6cTYv
-        bUVJODZsNGRjYmFnUmFDMC9ocU5QTy83Vnk4CkV0ZHBkc2x4enRUdy80a3ZJTGFW
-        NktweHJKUWZKOW1VN0E1Qk52UWI2MWcKLS0tIDBLT05CS29LQUFZVU1LRmthTURH
-        cFlsN3pKWFFsSHlyWFRraVVvc2dlcWsKXgQOYVDGSlIZ3B497qpTUZsvAU0h7cXp
-        2wnMR/7+eIiJk7be3QDTT1Hknyt5CrBHhpD9MAL91lURRzyz4CqhtA==
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBBZVgzZXFZQ0FTMEdhc2JN
+        YUFNTUk3a3ZNazRHejlmdXBod0RLTmVyYlZjCm5ZQ2k2aVAwTEVXaWVnY0Vrdmxz
+        Y1VDZ0g5KzRCS0lrMXIxLzVUZGFWMW8KLS0tIEVoYjE4c3B3N0F6SlRIYUFOT2hh
+        L3FoRjBaTnJZYkM3alRodXJwYngyR1UKFJAKEE4Fxn62O2BoHMUh7RtDByw5J2Kj
+        evyv2Z6J1MAoTaOTKiAYqUFbWZhMyXJaRM4xgBH7Oe1iqqq4o3xQrw==
         -----END AGE ENCRYPTED FILE-----
-  lastmodified: "2025-07-27T19:50:20Z"
-  mac: ENC[AES256_GCM,data:+2pnSf97rdDwTcIfoKcTIOHaBVWGPraVcEykYZZ+vuR7tTJodwcSaoye5mW7fTHtRvmr41lzz8YABm6WMrZLLzWXBhHAhG/I1yb/vum0F/V4IajWvAhIf1OptqBVv/AaGVdP890q+eich/mmooNLmxe4EmRk/E5kqdYTzRo7Dus=,iv:823IJdffbrXziopLzVEcuDQlIdfSv89QL9t/aZYuE1k=,tag:8n104VEdD8TzTe4z5s2lcA==,type:str]
+  lastmodified: "2025-07-28T05:26:58Z"
+  mac: ENC[AES256_GCM,data:DXs8P+NXM6B5/8NmqorPVPW3C0wZnB51de9X2HMPRdY/vUalx2R3/v27LTPqDumcKMP/XpHJJXc03M53MhTujZFaGivXYrSMae4QqhhaMu8VI1RQdj7CW2jYgCM2OS5QeiI3EJYeLxHasRbR4kPDB2/Y8DHt19gLZaOxD1k6O2Y=,iv:TJdddPuP1B92HmTqrQ/b3hjwLJnZwWNgPi4Rdbzju1A=,tag:MjeGs2ZWghDrk2QMz+rt0w==,type:str]
   encrypted_regex: ^(data|stringData)$
   mac_only_encrypted: true
   version: 3.10.2

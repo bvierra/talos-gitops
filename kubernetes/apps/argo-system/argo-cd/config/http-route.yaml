@@ -6,7 +6,7 @@ spec:
   parentRefs:
     - name: external
       namespace: kube-system
-  hostnames: ["argo.vierra.host"]
+  hostnames: ["argo.k8s.vierra.host"]
   rules:
     - backendRefs:
         - name: argocd-server
